@@ -3,6 +3,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowDown } from 'lucide-react';
+import Image from 'next/image';
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -49,14 +50,14 @@ export default function Hero() {
 
         {/* Background Image Grid (z-0) */}
         <div className="absolute inset-0 z-0 grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-2 w-full h-full opacity-60">
-          <img src="/images/8.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/7.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/3.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/4.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/5.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/10.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/1.jpeg" className="w-full h-full object-cover" alt="" />
-          <img src="/images/2.jpeg" className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/8.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/7.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/3.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/4.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/5.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/10.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/1.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/2.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
         </div>
 
         {/* End State: Solid White background (z-10) */}
@@ -142,7 +143,7 @@ export default function Hero() {
               <p className="text-[4vw] md:text-[24px] font-bold tracking-[0.3em] text-zinc-800 mt-4 md:mt-6 uppercase">Building The Future</p>
                 <div className="flex items-center gap-3 mt-3 md:mt-6 md:ml-30">
                 <span className="text-[3vw] md:text-[26px] font-semibold text-zinc-700">Building with Confidence:<span className='text-[3vw] md:text-[36px] font-bold text-black' > LENSFED Accredited Firm</span></span>
-                <img src="/images/lensfed.jpeg" alt="LENSFED" className="w-15 h-15 md:w-36 md:h-36" />
+                <Image unoptimized src="/images/lensfed.jpeg" width={144} height={144} alt="LENSFED" className="w-15 h-15 md:w-36 md:h-36" />
                 </div>
             </motion.div>
 
