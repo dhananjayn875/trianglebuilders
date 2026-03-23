@@ -1,6 +1,9 @@
 import type {NextConfig} from 'next';
 
-const isProd = process.env.NODE_ENV === 'production';
+const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
+const normalizedBasePath = rawBasePath
+  ? `/${rawBasePath.replace(/^\/+|\/+$/g, '')}`
+  : '';
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
@@ -23,7 +26,7 @@ const nextConfig: NextConfig = {
     ],
   },
   output: 'export',
-  basePath: isProd ? '/trianglebuilders' : '',
+  basePath: normalizedBasePath,
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
