@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${inter.variable} ${spaceGrotesk.variable} scroll-smooth`}>
-      <body className="bg-white text-zinc-900 font-sans antialiased selection:bg-zinc-900 selection:text-white" suppressHydrationWarning>
+      <body className="bg-grey/80 text-zinc-900 font-sans antialiased selection:bg-zinc-900 selection:text-white" suppressHydrationWarning>
         {children}
       </body>
     </html>
