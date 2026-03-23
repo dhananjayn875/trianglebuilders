@@ -10,6 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  const isHomePage = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,12 +21,14 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: 'About', hash: '#about' },
-    { name: 'Services', hash: '#services' },
-    { name: 'Portfolio', hash: '#portfolio' },
-    { name: 'Pricing', hash: '#pricing' },
-    { name: 'Contact', hash: '#contact' },
+    { name: 'About', sectionId: 'about' },
+    { name: 'Services', sectionId: 'services' },
+    { name: 'Portfolio', sectionId: 'portfolio' },
+    { name: 'Pricing', sectionId: 'pricing' },
+    { name: 'Contact', sectionId: 'contact' },
   ];
+
+  const getSectionHref = (sectionId: string) => (isHomePage ? `#${sectionId}` : `/#${sectionId}`);
 
   return (
     <motion.nav
@@ -38,7 +41,7 @@ export default function Navbar() {
       <div className={`max-w-7xl mx-auto flex items-center justify-between transition-all duration-500 rounded-2xl relative overflow-hidden ${scrolled ? 'px-6 py-3 shadow-sm' : 'px-2 py-3'}`}>
         {/* Smooth background layer */}
         <div
-          className={`absolute inset-0 bg-zinc-100/80 backdrop-blur-md border border-zinc-200 transition-opacity duration-500 -z-10 ${scrolled ? 'opacity-90 ' : 'opacity-0'}`}
+          className={`absolute inset-0 bg-zinc-100/80 backdrop-blur-md border border-zinc-200 transition-opacity duration-500 -z-10 ${scrolled ? 'opacity-90' : 'opacity-0'}`}
         />
 
         <Link href="/" className="flex items-center gap-3 group">
@@ -51,7 +54,7 @@ export default function Navbar() {
           {navLinks.map((link) => (
             <Link
               key={link.name}
-              href={pathname === '/' ? link.hash : `/${link.hash}`}
+              href={getSectionHref(link.sectionId)}
               className={`text-sm font-medium transition-colors uppercase tracking-wider ${scrolled ? 'text-zinc-800 hover:text-black' : 'text-black hover:text-zinc-700'}`}
             >
               {link.name}
@@ -87,11 +90,11 @@ export default function Navbar() {
             exit={{ opacity: 0, height: 0, y: -20 }}
             className="md:hidden mt-4 mx-4 glass-panel bg-zinc-100/80 "
           >
-            <div className="px-6 py-6 bg-zinc-100/80 flex flex-col gap-6">
+            <div className="px-6 py-6 flex flex-col gap-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.name}
-                  href={pathname === '/' ? link.hash : `/${link.hash}`}
+                  href={getSectionHref(link.sectionId)}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-zinc-500 hover:text-zinc-900 font-medium uppercase tracking-wider"
                 >
