@@ -39,7 +39,7 @@ export default function About() {
                 whileInView={{ filter: 'grayscale(0%)', opacity: 1 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 1.5, delay: 0.4 }}
-                className="absolute inset-0 bg-[url('/trianglebuilders/images/9.jpeg')] bg-cover bg-center" 
+                className="absolute inset-0 bg-[url('/images/9.jpeg')] bg-cover bg-center" 
               />
               <motion.div 
                 initial={{ borderColor: 'rgba(24, 24, 27, 0)' }}
