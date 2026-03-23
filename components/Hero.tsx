@@ -73,7 +73,7 @@ export default function Hero() {
             '--house-scale': houseScale,
             '--move': moveProgress
           } as any}
-          className="absolute z-20 w-[70vw] md:w-full max-w-xs md:max-w-md aspect-square flex items-center justify-center pointer-events-none scale-[var(--house-scale)] -translate-y-[calc(var(--move)*15vh)] md:translate-y-0 md:-translate-x-[calc(var(--move)*18vw)] mt-16 md:mt-0"
+          className="absolute z-20 w-[70vw] md:w-full max-w-xs md:max-w-md aspect-square flex items-center justify-center pointer-events-none scale-[var(--house-scale)] -translate-y-[calc(var(--move)*15vh)] md:translate-y-0 md:-translate-x-[calc(var(--move)*18vw)] mt-16 md:mt-0 md:mr-20"
         >
           <svg viewBox="0 0 400 400" className="w-full h-full drop-shadow-2xl">
             <defs>
