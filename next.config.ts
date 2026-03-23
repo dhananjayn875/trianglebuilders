@@ -1,5 +1,7 @@
 import type {NextConfig} from 'next';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -21,7 +23,7 @@ const nextConfig: NextConfig = {
     ],
   },
   output: 'export',
-  basePath: '/trianglebuilders',
+  basePath: isProd ? '/trianglebuilders' : '',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
