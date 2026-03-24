@@ -1,4 +1,5 @@
 import type {NextConfig} from 'next';
+import path from 'path';
 
 const rawBasePath = process.env.NEXT_PUBLIC_BASE_PATH ?? '';
 const normalizedBasePath = rawBasePath
@@ -7,6 +8,7 @@ const normalizedBasePath = rawBasePath
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  outputFileTracingRoot: path.resolve(__dirname),
   eslint: {
     ignoreDuringBuilds: true,
   },

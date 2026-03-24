@@ -54,10 +54,10 @@ export default function Hero() {
           <Image unoptimized src="/images/7.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
           <Image unoptimized src="/images/3.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
           <Image unoptimized src="/images/4.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
-          <Image unoptimized src="/images/5.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/5.jpg" width={800} height={800} className="w-full h-full object-cover" alt="" />
           <Image unoptimized src="/images/10.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
           <Image unoptimized src="/images/1.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
-          <Image unoptimized src="/images/2.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
+          <Image unoptimized src="/images/8.jpeg" width={800} height={800} className="w-full h-full object-cover" alt="" />
         </div>
 
         {/* End State: Solid White background (z-10) */}

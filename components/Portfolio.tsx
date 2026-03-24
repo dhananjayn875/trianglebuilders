@@ -10,24 +10,24 @@ const projects = [
     id: 1,
     name: 'The Glass Pavilion', 
     location: 'Malibu, CA', 
-    image: '/images/1.jpeg',
+    image: '/images/8.jpeg',
     description: 'A stunning cantilevered structure that seemingly floats above the Pacific coastline. The Glass Pavilion redefines indoor-outdoor living with its floor-to-ceiling structural glass and minimalist steel framework.',
     year: '2024',
     area: '4,500 sq ft',
     materials: 'Structural Glass, Steel, Polished Concrete',
     gallery: [
-      '/images/2.jpeg',
-      '/images/3.jpeg',
-      '/images/4.jpeg',
-      '/images/5.jpeg',
+      '/images/6.jpeg',
+      '/images/8.jpeg',
+      '/images/7.jpeg',
+      '/images/1.jpeg',
     ],
-    blueprint: '/images/10.jpeg'
+    blueprint: '/images/2.jpg'
   },
   { 
     id: 2,
     name: 'Concrete Oasis', 
     location: 'Austin, TX', 
-    image: '/images/6.jpeg',
+    image: '/images/9.jpeg',
     description: 'A brutalist masterpiece softened by lush internal courtyards. Concrete Oasis uses board-formed concrete to create a thermal mass that keeps the interior cool during harsh Texas summers.',
     year: '2023',
     area: '6,200 sq ft',
@@ -38,13 +38,13 @@ const projects = [
       '/images/9.jpeg',
       '/images/10.jpeg',
     ],
-    blueprint: '/images/1.jpeg'
+    blueprint: '/images/2.jpg'
   },
   { 
     id: 3,
     name: 'Minimalist Haven', 
     location: 'Portland, OR', 
-    image: '/images/2.jpeg',
+    image: '/images/3.jpeg',
     description: 'Nestled in a dense forest, this home uses blackened timber to blend into its surroundings. The interior is a stark contrast, featuring bright, gallery-like spaces for the owner\'s art collection.',
     year: '2025',
     area: '3,800 sq ft',
@@ -55,13 +55,13 @@ const projects = [
       '/images/5.jpeg',
       '/images/6.jpeg',
     ],
-    blueprint: '/images/7.jpeg'
+    blueprint: '/images/5.jpg'
   },
   { 
     id: 4,
     name: 'Luminous Box', 
     location: 'Denver, CO', 
-    image: '/images/8.jpeg',
+    image: '/images/1.jpeg',
     description: 'An urban infill project that maximizes natural light while maintaining privacy. The Luminous Box features a translucent polycarbonate facade that glows like a lantern at night.',
     year: '2022',
     area: '2,900 sq ft',
@@ -72,7 +72,7 @@ const projects = [
       '/images/1.jpeg',
       '/images/2.jpeg',
     ],
-    blueprint: '/images/3.jpeg'
+    blueprint: '/images/5.jpg'
   },
 ];
 

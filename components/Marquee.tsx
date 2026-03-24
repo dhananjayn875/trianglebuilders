@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 export default function Marquee() {
   return (
-    <div className="w-full bg-grey-200 text-white py-4 overflow-hidden flex whitespace-nowrap border-y border-zinc-800 relative z-20">
+    <div className="w-full bg-slate-800 text-white py-4 overflow-hidden flex whitespace-nowrap border-y border-zinc-800 relative z-20">
       <motion.div 
         className="flex gap-10 items-center font-mono text-sm uppercase tracking-widest"
         animate={{ x: ["0%", "-50%"] }}
